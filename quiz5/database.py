@@ -77,8 +77,8 @@ def change_db(username):
     password_coll=order_management_db["customers"]
     customer=({"username":username})
     password = {"$set":{"password": newpassword1 }}
-#    order_management.update_one (customer, password)
-    password_coll.find_one_and_update(customer,password)
+    order_management.update_one (customer, password)
+#     password_coll.find_one_and_update(customer,password)
     return
     
 def get_password(username):
